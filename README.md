@@ -8,7 +8,7 @@ __SEMESTRE:__ 201810-3er Semestre.
 __CODIGO:__ 201714930.
 
 ##Integrante 2 (a)
-__NOMBRE:__ Laura Isabella Forero Camacho.
+__NOMBRE:__ Laura Isabella Forero Camacho. LA MAS HERMOSA E INTELIGENTE FORERO :)
 
 __SEMESTRE:__ 201810-3er Semestre.
 
