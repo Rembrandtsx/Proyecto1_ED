@@ -7,6 +7,12 @@ import model.data_structures.LinkedSimpleList;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Queue;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonIOException;
@@ -75,9 +81,18 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 				if ( obj.get("trip_total") != null )
 				{ tripTotal = obj.get("trip_total").getAsDouble(); }
 				
+				String pDateStart= "1970-01-01T00:00:00.000+0000";
+				Date pDateStart2= new Date(0);
+				if ( obj.get("trip_start_timestamp") != null )
+				{ 
+					DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+					pDateStart = obj.get("trip_start_timestamp").getAsString(); 
+					pDateStart2=  df.parse(pDateStart);
+				
+				}
 				
 				
-				services.add(new Service(tripId, taxiId, tripSeconds, tripMiles, tripTotal, area));
+				services.add(new Service(tripId, taxiId, tripSeconds, tripMiles, tripTotal, area, pDateStart2));
 				taxis.add(new Taxi(taxiId, company));
 				
 				
@@ -148,6 +163,12 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 			}
 		
 		return rta;
+	}
+	public Queue<Service> getListWithStartAndEndDate(Date pInicio, Date pfinal){
+		// Implementacion.
+		Queue<Service> rta= null;
+		
+		 return rta;
 	}
 
 	

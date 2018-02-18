@@ -29,6 +29,8 @@ public interface ITaxiTripsManager {
 	 * @return List of services
 	 */
 	public LinkedSimpleList<Service> getTaxiServicesToCommunityArea(int communityArea);
+	
+	
 
 
 	

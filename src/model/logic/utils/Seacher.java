@@ -2,7 +2,6 @@ package model.logic.utils;
 
 import java.util.Comparator;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Seacher<T>{
 	
@@ -16,7 +15,7 @@ public class Seacher<T>{
 	}
 	
 	
-	public T buscarMenor( List<T> elementos, Comparator<T> comparador)
+	public T buscarMenor( LinkedList<T> elementos, Comparator<T> comparador)
 	{
 		//TODO Complete seg�n la documentaci�n
 		// Borre el codigo para luego implementarlo.
@@ -25,5 +24,6 @@ public class Seacher<T>{
 				
 				return buscado;
 	}
+	
 
 }

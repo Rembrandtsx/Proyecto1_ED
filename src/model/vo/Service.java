@@ -1,5 +1,8 @@
 package model.vo;
 
+import java.util.Date;
+import java.util.Calendar;
+
 /**
  * Representation of a Service object
  */
@@ -12,9 +15,11 @@ public class Service implements Comparable<Service> {
 	private double tripMiles;
 	private double tripTotal;
 	private int area;
+	private Date dateStart;
+	private Date dateEnd;
 	
 	
-	public Service(String pTripId, String pTaxiId, int ptripSeconds, double ptripMiles, double pTripTotal, int pArea) {
+	public Service(String pTripId, String pTaxiId, int ptripSeconds, double ptripMiles, double pTripTotal, int pArea, Date pStart) {
 		// TODO Auto-generated constructor stub
 		tripId=pTripId;
 		taxiId=pTaxiId;
@@ -22,6 +27,7 @@ public class Service implements Comparable<Service> {
 		tripMiles=ptripMiles;
 		tripTotal=pTripTotal;
 		area=pArea;
+		dateStart=pStart;
 	}
 	/**
 	 * @return id - Trip_id
@@ -65,6 +71,18 @@ public class Service implements Comparable<Service> {
 	public int getArea() {
 		// TODO Auto-generated method stub
 		return area;
+	}
+	public Date getDateStart() {
+		// TODO Auto-generated method stub
+		return dateStart;
+	}
+	public Date getDateEnd() {
+		// TODO Auto-generated method stub
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(this.dateStart); 
+		calendar.add(Calendar.SECOND,this.tripSeconds); 
+		
+		return (Date) calendar.getTime();
 	}
 
 	@Override

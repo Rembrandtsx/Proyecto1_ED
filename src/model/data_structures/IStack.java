@@ -2,6 +2,8 @@ package model.data_structures;
 
 public interface IStack<E> {
 
+	
+	
 	/** Push a new element at the top of the stack */
 	public void push (E item);
 	

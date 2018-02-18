@@ -9,7 +9,15 @@ import com.sun.jmx.remote.util.Service;
  * 
  */
 
-public class ComparadorDateService implements Comparator<Service> {
+public class ComparadorGananciaTaxi implements Comparator<Service> {
+
+	@Override
+	public int compare(Service arg0, Service arg1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+public class ComparadorDistanciaServicio implements Comparator<Service> {
 
 	@Override
 	public int compare(Service arg0, Service arg1) {
