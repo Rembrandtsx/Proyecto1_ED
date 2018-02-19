@@ -37,7 +37,7 @@ public class Stack<T extends Comparable<T>> implements IStack<T>{
 	      end = node;
 	    
 		else {
-	      node = end;
+	      node.modifyNext(end);
 	      end = node;
 	    }
 		
