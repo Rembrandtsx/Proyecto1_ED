@@ -87,7 +87,7 @@ public class ListaEncadenadaTest extends TestCase
         {
             lista.add( "text "+ cont );
         }
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
+        
 
         lista.delete("text 4");
         lista.delete("text 7");
@@ -113,7 +113,6 @@ public class ListaEncadenadaTest extends TestCase
         {
             lista.add( "text "+ cont );
         }
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
 
         
             // Verifica que la informaci�n sea correcta
@@ -139,7 +138,6 @@ public class ListaEncadenadaTest extends TestCase
         {
             lista.add( "text "+ cont );
         }
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
 
         
             // Verifica que la informaci�n sea correcta

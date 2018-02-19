@@ -1,7 +1,7 @@
 package test;
 
 import junit.framework.TestCase;
-import model.data_structures.Queue;
+
 import model.data_structures.Stack;
 
 public class StackTest extends TestCase{
@@ -37,78 +37,65 @@ public class StackTest extends TestCase{
         size = 10;
         for( int cont = 0; cont < size; cont++ )
         {
-            pila.enqueue("text "+ cont);;
+            pila.push("text "+ cont);;
         }
     }
 
    
 
     /**
-     * Prueba add
+     * Prueba push
      * 
      **/
-    public void testAgregarCola( )
+    public void testPush1( )
     {
         setupEscenario1( );
         size = 11;
         
         for( int cont = 0; cont < size; cont++ )
         {
-            cola.enqueue("text " + cont);;
+            pila.push("text " + cont);;
         }
         // Verifica que la informaci�n sea correcta
-        assertEquals( "La adici�n no se realiz� correctamente", cola.dequeue(), "text 0" );
+        assertEquals( "La adici�n no se realiz� correctamente", pila.pop(), "text 10" );
         
 
         // Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size-1, cola.getSize() );
+        assertEquals( "El tamaño de la lista no es el correcto", size-1, pila.getSize() );
     
     }
 
     /**
-     * Prueba Enqueue
+     * Prueba Pop
      * */
-    public void testEnqueue( )
+    public void testPop( )
     {
     	setupEscenario1( );
         size = 14;
         for( int cont = 0; cont < size; cont++ )
         {
-            cola.enqueue("text "+ cont);
+            pila.push("text "+ cont);
         }
         
         // Verifica que la informaci�n sea correcta
-        	assertEquals( "No se borro correctamente", cola.dequeue(), "text 0");
-        	assertEquals( "No se borro correctamente", cola.dequeue(), "text 1");
-        	assertEquals( "No se borro correctamente", cola.dequeue(), "text 2");
-        	assertEquals( "No se borro correctamente", cola.dequeue(), "text 3");
+        	assertEquals( "No se saco correctamente", pila.pop(), "text 13");
+        	assertEquals( "No se saco correctamente", pila.pop(), "text 12");
+        	assertEquals( "No se saco correctamente", pila.pop(), "text 11");
+        	assertEquals( "No se saco correctamente", pila.pop(), "text 10");
             
             // Verifica que el tamaño
-            assertEquals( "El tamaño de la cola no es el correcto", size-4, cola.getSize() );
+            assertEquals( "El tamaño de la cola no es el correcto", size-4, pila.getSize() );
          
 
     }
 
-    /**
-     * Prueba Dequeue
-     * 
-    */
-    public void testDequeue( )
+    public void testIsEmpty( )
     {
-    	setupEscenario2( );
-        size=10;
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
-
-    	
-    		assertEquals( "El tamaño de la lista no es el correcto", size, cola.getSize() );
+    	setupEscenario1( );
+       
+    	assertTrue( "Incorrecto la lista debe estar vacia", pila.isEmpty());
         
-            // Verifica que la informaci�n sea correcta
-        	assertEquals(  "No se obtuvo el elemento indicado", cola.dequeue(), "text 0");
-        	assertEquals(  "No se obtuvo el elemento indicado", cola.dequeue(), "text 1");
-            
-            
-            // Verifica que el tamaño
-            assertEquals( "El tamaño de la lista no es el correcto", size-2, cola.getSize() );
+    	assertEquals( "El tamaño de la lista no es el correcto", size, pila.getSize() );
          
 
    

@@ -99,7 +99,7 @@ public class QueueTest extends TestCase{
     {
     	setupEscenario2( );
         size=10;
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
+       
 
     	
     		assertEquals( "El tamaño de la lista no es el correcto", size, cola.getSize() );
