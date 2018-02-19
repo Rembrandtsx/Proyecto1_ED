@@ -1,0 +1,85 @@
+[33mcommit 8cc9d13c5fdb9df9e73de052ae02003a367ce5aa[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 22:03:09 2018 -0500
+
+    UML
+
+[33mcommit 7328e50f9a7058ae779d708b5adeb2674a19d9a8[m
+Merge: e017ec4 3d5fdbe
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 21:44:08 2018 -0500
+
+    Resolucion de errores
+
+[33mcommit 3d5fdbe227f15e3d9816dd688129fbc9c9f95ae0[m
+Author: lala341 <li.forero@uniandes.edu.co>
+Date:   Sun Feb 18 21:40:24 2018 -0500
+
+    Test de Pila y correciones
+
+[33mcommit e017ec4c116232c76960596785a89ad1ff2dd0f4[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 21:37:22 2018 -0500
+
+    merging changes
+
+[33mcommit c7f3b258e1898d7ea662774d11850dc84472d563[m
+Author: lala341 <li.forero@uniandes.edu.co>
+Date:   Sun Feb 18 21:16:32 2018 -0500
+
+    Test de Cola
+
+[33mcommit bf72e74828658b0938a52167a84d38feabe1211e[m
+Author: lala341 <li.forero@uniandes.edu.co>
+Date:   Sun Feb 18 20:43:30 2018 -0500
+
+    Corrección pruebas unitarias.
+
+[33mcommit 67743e36a4d067a2d928f1f5911024d0872f96e5[m
+Merge: abc0014 dff93af
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 20:23:02 2018 -0500
+
+    Readme
+
+[33mcommit abc0014cbe061c947a423184d09b2d60953f8b13[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 20:15:22 2018 -0500
+
+    Libreria JUnit
+
+[33mcommit dff93af90b201712d4b008bf9bdf19cbe2d4f264[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Mon Feb 19 01:14:55 2018 +0000
+
+    README.md edited online with Bitbucket
+
+[33mcommit 999392bc643863a8f3864659a2d7a5e722c5fb1b[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Sun Feb 18 17:34:58 2018 +0000
+
+    Added corrections
+
+[33mcommit b85f2f87299f4cc4b4f05c90cccd15355625fc7f[m
+Author: lala341 <li.forero@uniandes.edu.co>
+Date:   Sun Feb 18 11:26:54 2018 -0500
+
+    Corrección de algunas estructuras.
+
+[33mcommit c6346207fb99ff9be4f13faa032ea4ba4098a4a3[m
+Author: lala341 <li.forero@uniandes.edu.co>
+Date:   Sun Feb 18 09:34:48 2018 -0500
+
+    Adicion de estructuras de datos
+
+[33mcommit ffac03c73081546b242af0c3d7de17826b78c2ae[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Tue Feb 6 21:11:11 2018 +0000
+
+    README.md editado para establecer los roles de cada uno
+
+[33mcommit d98a0145652c959d777c249a0dda7211a8d9a63f[m
+Author: Camilo Andres Salinas Martinez <ca.salinas@uniandes.edu.co>
+Date:   Tue Feb 6 09:06:48 2018 -0500
+
+    Agregado README.md
