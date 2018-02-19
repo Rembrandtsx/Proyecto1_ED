@@ -2,7 +2,6 @@ package test;
 
 
 import junit.framework.TestCase;
-import model.data_structures.LinkedSimpleList;
 import model.data_structures.Queue;
 
 
@@ -50,7 +49,7 @@ public class QueueTest extends TestCase{
      * Prueba add
      * 
      **/
-    public void testAgregarLista( )
+    public void testAgregarCola( )
     {
         setupEscenario1( );
         size = 11;
@@ -64,126 +63,67 @@ public class QueueTest extends TestCase{
         
 
         // Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size, cola.getSize() );
+        assertEquals( "El tamaño de la lista no es el correcto", size-1, cola.getSize() );
     
     }
 
     /**
-     * Prueba delete
+     * Prueba Enqueue
      * */
-    public void testDelete( )
+    public void testEnqueue( )
     {
     	setupEscenario1( );
-        size = 11;
+        size = 14;
         for( int cont = 0; cont < size; cont++ )
         {
-            lista.add( "text "+ cont );
+            cola.enqueue("text "+ cont);
         }
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
-
-        lista.delete("text 4");
-        lista.delete("text 7");
-            // Verifica que la informaci�n sea correcta
-            assertTrue( "No se borro correctamente", lista.get("text 4")!=null);
-            assertTrue( "No se borro correctamente", lista.get("text 7")!=null);
-            assertTrue( "No se borro correctamente", lista.delete("text 4"));
-            assertTrue( "No se borro correctamente", lista.delete("text 7"));
+        
+        // Verifica que la informaci�n sea correcta
+        	assertEquals( "No se obtuvo correctamente", cola.dequeue(), "text 0");
+        	assertEquals( "No se obtuvo correctamente", cola.dequeue(), "text 1");
+        	assertEquals( "No se obtuvo correctamente", cola.dequeue(), "text 2");
+        	assertEquals( "No se obtuvo correctamente", cola.dequeue(), "text 3");
             
             // Verifica que el tamaño
-            assertEquals( "El tamaño de la lista no es el correcto", size-2, lista.size( ) );
+            assertEquals( "El tamaño de la cola no es el correcto", size-4, cola.getSize() );
          
 
     }
 
     /**
-     * Prueba get
+     * Prueba Dequeue
      * 
     */
-    public void testGetPorPosicion( )
+    public void testDequeue( )
     {
-    	setupEscenario1( );
-        size = 11;
-        for( int cont = 0; cont < size; cont++ )
-        {
-            lista.add( "text "+ cont );
-        }
+    	setupEscenario2( );
+        size=10;
         // Agrega los pacientes y verifica que se hayan agregado correctamente
 
+    	
+    		assertEquals( "El tamaño de la lista no es el correcto", size, cola.getSize() );
         
             // Verifica que la informaci�n sea correcta
-        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(4), "text 3");
-        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(10), "text 9");
+        	assertEquals(  "No se obtuvo el elemento indicado", cola.dequeue(), "text 0");
+        	assertEquals(  "No se obtuvo el elemento indicado", cola.dequeue(), "text 1");
             
             
             // Verifica que el tamaño
-            assertEquals( "El tamaño de la lista no es el correcto", size, lista.size( ) );
+            assertEquals( "El tamaño de la lista no es el correcto", size-2, cola.getSize() );
          
 
    
     }
-    /**
-     * Prueba get
-     * 
-    */
-    public void testGetPorElemento( )
+    public void testIsEmpty( )
     {
     	setupEscenario1( );
-        size = 11;
-        for( int cont = 0; cont < size; cont++ )
-        {
-            lista.add( "text "+ cont );
-        }
-        // Agrega los pacientes y verifica que se hayan agregado correctamente
-
+       assertTrue( "Incorrecto la lista debe estar vacia", cola.isEmpty());
         
-            // Verifica que la informaci�n sea correcta
-            assertTrue( "No se obtuvo el elemento indicado", lista.get("text 4")!=null);
-            assertTrue( "No se obtuvo el elemento indicado", lista.get(5)!=null);
-        
-            
-            
-            // Verifica que el tamaño
-            assertEquals( "El tamaño de la lista no es el correcto", size, lista.size( ) );
+      assertEquals( "El tamaño de la lista no es el correcto", size, cola.getSize() );
          
 
    
     }
-    /**
-     * Prueba size
-     * 
-     * */
-    public void testAgregarPacienteAntesDeError( )
-    {
-        setupEscenario2( );
-        lista.add( "text 2");
-        size=11;
-        
-     // Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size, lista.size( ) );
-     
-        lista.delete("text 2");
-     // Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( )-1 );
-      
-    }
-
-    /**
-     * Prueba listing
-     * 
-     * */
-    public void testListing( )
-    {
-        setupEscenario2( );
-        size = 11;
-        String[] listaElementos= new String[lista.size()];
-		lista.listing(listaElementos);
-		
-		
-		for (String lista : listaElementos) {
-	        assertEquals( "La información de los elementos esta mal", lista, "text 1" );
-		}
-		// Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( )-1 );
-     
-    }
+    
 }
