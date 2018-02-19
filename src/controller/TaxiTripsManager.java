@@ -186,28 +186,28 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 		 return rta;
 	}
 	
-	public LinkedSimpleList<String> getCompaniaTaxiInscrito(){
+	public LinkedSimpleList<String> getCompanhiaTaxiInscrito(){
 		
 		LinkedSimpleList<String> rta= null;
 		
 		 return rta;
 	}
 	
-	public int getTaxiQuePrestanServicioACompania(){
+	public int getTaxiQuePrestanServicioACompanhia(){
 		
 		int rta= 0;
 		
 		 return rta;
 	}
 	
-	public LinkedSimpleList<String> getListaAlfabetica(LinkedSimpleList<String> pCompaniaTaxiinscrito){
+	public LinkedSimpleList<String> getListaAlfabetica(LinkedSimpleList<String> pCompanhiaTaxiinscrito){
 		
 		LinkedSimpleList<String> rta= null;
 		
 		 return rta;
 	}
 	
-	public Taxi getTaxiMayorGanacia(String pCompania, Date pInicio, Date pfinal){
+	public Taxi getTaxiMayorGanacia(String pCompanhia, Date pInicio, Date pfinal){
 		
 		Taxi rta= null;
 		
