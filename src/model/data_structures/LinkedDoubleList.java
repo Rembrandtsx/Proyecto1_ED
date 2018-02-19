@@ -49,7 +49,29 @@ public class LinkedDoubleList<T extends Comparable<T>> extends LinkedSimpleList<
 	@Override
 	public boolean delete(T element) {
 		// TODO Auto-generated method stub
-		return false;
+		boolean respuesta=false;
+		
+		DoubleNode<T> ant=null;
+		DoubleNode<T> siguiente=null;
+		if(first!=null&&first.getElement()==element){
+			first= (DoubleNode<T>) first.getNext();
+			size--;
+			respuesta=true;
+		}
+		else{
+			while(actual!=null&&!respuesta){
+				if(actual.getElement()==element){
+					ant=actual.getPrevious();
+					siguiente=(DoubleNode<T>) actual.getNext();
+					ant.modifyNext(siguiente);;
+					siguiente.modifyPrevious(ant);;
+					size--;
+					respuesta=true;
+				}
+				this.next();
+			}
+		}
+		return respuesta;
 	}
 
 	@Override

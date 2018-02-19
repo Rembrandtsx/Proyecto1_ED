@@ -1,5 +1,8 @@
 #Proyecto 1 201810 Estructuras de Datos seccion 2
 
+
+![Proyecto 1](/img/banner.png)
+
 ##Integrante 1 (b)
 __NOMBRE:__ Camilo Andres Salinas Martinez. 
 
