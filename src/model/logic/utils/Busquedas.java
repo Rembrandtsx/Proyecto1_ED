@@ -3,7 +3,7 @@ package model.logic.utils;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-public class Seacher<T>{
+public class Busquedas<T>{
 	
 	public T buscarMayor(LinkedList<T> elementos, Comparator<T> comparador) 
 	{

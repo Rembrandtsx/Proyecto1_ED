@@ -10,9 +10,9 @@ import java.io.FileReader;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Iterator;
+
 import java.util.Queue;
+import java.util.Stack;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonIOException;
@@ -164,9 +164,80 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 		
 		return rta;
 	}
+	
 	public Queue<Service> getListWithStartAndEndDate(Date pInicio, Date pfinal){
 		// Implementacion.
 		Queue<Service> rta= null;
+		
+		 return rta;
+	}
+	
+	public Taxi getInfoTaxi(String pIdentificador, Date pInicio, Date pfinal){
+		// Implementacion.
+		Taxi rta= null;
+		
+		 return rta;
+	}
+	
+	public LinkedSimpleList<Service> getListRangoDistance(Date pInicio, Date pfinal){
+		// Implementacion.
+		LinkedSimpleList<Service> rta= null;
+		
+		 return rta;
+	}
+	
+	public LinkedSimpleList<String> getCompañiaTaxiInscrito(){
+		
+		LinkedSimpleList<String> rta= null;
+		
+		 return rta;
+	}
+	
+	public int getTaxiQuePrestanServicioACompañia(){
+		
+		int rta= 0;
+		
+		 return rta;
+	}
+	
+	public LinkedSimpleList<String> getListaAlfabetica(LinkedSimpleList<String> pCompañiaTaxiinscrito){
+		
+		LinkedSimpleList<String> rta= null;
+		
+		 return rta;
+	}
+	
+	public Taxi getTaxiMayorGanacia(String pCompañia, Date pInicio, Date pfinal){
+		
+		Taxi rta= null;
+		
+		 return rta;
+	}
+	
+	public String getInfoZonaCiudad(int pZona, Date pInicio, Date pfinal){
+		
+		String rta= "";
+		
+		 return rta;
+	}
+	
+	public LinkedSimpleList<Integer> getInfoZonasCiudad( ){
+		
+		LinkedSimpleList<Integer> rta= null;
+		
+		 return rta;
+	}
+	
+	public LinkedSimpleList<String> getTopX( int pNumero,Date pInicio, Date pfinal){
+		
+		LinkedSimpleList<String> rta= null;
+		
+		 return rta;
+	}
+	
+	public Stack<Service> getTop( Date pInicio, Date pfinal){
+		
+		Stack<Service> rta= null;
 		
 		 return rta;
 	}

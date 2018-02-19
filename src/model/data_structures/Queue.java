@@ -59,5 +59,10 @@ public class Queue<T extends Comparable<T>> implements IQueue<T>{
 		}
 		return false;
 	}
+	
+	public int getSize(){
+		
+		return this.size;
+	}
 
 }

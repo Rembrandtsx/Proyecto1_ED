@@ -69,5 +69,6 @@ public class Stack<T extends Comparable<T>> implements IStack<T>{
 		}
 		return false;
 	}
+	
 
 }

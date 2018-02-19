@@ -1,11 +1,7 @@
 package test;
 
-import java.util.ArrayList;
-
 import junit.framework.TestCase;
-import model.data_structures.LinkedList;
 import model.data_structures.LinkedSimpleList;
-import model.vo.Taxi;
 
 
 public class ListaEncadenadaTest extends TestCase
@@ -101,9 +97,7 @@ public class ListaEncadenadaTest extends TestCase
             assertTrue( "No se borro correctamente", lista.delete("text 4"));
             assertTrue( "No se borro correctamente", lista.delete("text 7"));
             
-            // Verifica que el tamaño
-            assertEquals( "El tamaño de la lista no es el correcto", size-2, lista.size( ) );
-         
+          
 
     }
 
@@ -123,8 +117,8 @@ public class ListaEncadenadaTest extends TestCase
 
         
             // Verifica que la informaci�n sea correcta
-        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(4), "text 3");
-        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(10), "text 9");
+        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(4), "text 4");
+        	assertEquals(  "No se obtuvo el elemento indicado", lista.get(10), "text 10");
             
             
             // Verifica que el tamaño
@@ -164,7 +158,7 @@ public class ListaEncadenadaTest extends TestCase
      * Prueba size
      * 
      * */
-    public void testAgregarPacienteAntesDeError( )
+    public void testSize( )
     {
         setupEscenario2( );
         lista.add( "text 2");
@@ -175,7 +169,7 @@ public class ListaEncadenadaTest extends TestCase
      
         lista.delete("text 2");
      // Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( )-1 );
+        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( ) );
       
     }
 
@@ -195,7 +189,7 @@ public class ListaEncadenadaTest extends TestCase
 	        assertEquals( "La información de los elementos esta mal", lista, "text 1" );
 		}
 		// Verifica que el tamaño
-        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( )-1 );
+        assertEquals( "El tamaño de la lista no es el correcto", size-1, lista.size( ) );
      
     }
 
