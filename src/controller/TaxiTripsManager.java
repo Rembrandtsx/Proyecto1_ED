@@ -128,7 +128,7 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 		}
 			System.out.println("Hola ::"+ suma );
 			
-			services.mergesort(services);
+			services.mergesort(services.getFirst());
 			for(int i = 0; i < services.size(); i+=100) {
 				
 				
