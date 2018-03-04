@@ -1,7 +1,7 @@
 package model.data_structures;
 
 
-public class SimpleNode <T>{
+public class SimpleNode <T extends Comparable<T>>{
 
 	private T element;
 	
