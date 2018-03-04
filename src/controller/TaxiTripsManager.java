@@ -4,6 +4,8 @@ import model.vo.Taxi;
 import model.vo.Service;
 import model.data_structures.LinkedList;
 import model.data_structures.LinkedSimpleList;
+import model.logic.utils.ComparatorServicio;
+import model.logic.utils.Ordenamiento;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,8 +27,9 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 	// TODO
 	// Definition of data model 
 	
-	private LinkedList<Service> services;
+	private LinkedSimpleList<Service> services;
 	private LinkedSimpleList<Taxi> taxis;
+	private Ordenamiento<Service> hola;
 	
 	
 	
@@ -38,7 +41,7 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 		
 		
 		JsonParser parser = new JsonParser();
-		
+		int suma = 0;
 		try {
 			
 			/* Cargar todos los JsonObject (servicio) definidos en un JsonArray en el archivo */
@@ -51,12 +54,12 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 				String company = "NaN";
 				if ( obj.get("company") != null )
 				{ company = obj.get("company").getAsString(); }
-				System.out.println(company);
+				
 				
 				int area = 0;
 				if ( obj.get("pickup_community_area") != null )
 				{ area = obj.get("pickup_community_area").getAsInt(); }
-				System.out.println(area);
+				
 				
 				String taxiId = "NaN";
 				if ( obj.get("taxi_id") != null )
@@ -93,11 +96,13 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 				
 				
 				services.add(new Service(tripId, taxiId, tripSeconds, tripMiles, tripTotal, area, pDateStart2));
+				
 				taxis.add(new Taxi(taxiId, company));
 				
-				
+				suma ++;
 				
 				}
+			
 		}
 		catch (JsonIOException e1 ) {
 			// TODO Auto-generated catch block
@@ -115,8 +120,11 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 			// TODO Auto-generated catch block
 			e4.printStackTrace();
 		}
+		System.out.println("Se Cargaron :"+services.size());
+			System.out.println("Hola ::"+ suma );
 			
 	}
+	
 
 	@Override
 	public LinkedSimpleList<Taxi> getTaxisOfCompany(String company) {

@@ -6,6 +6,7 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 
 	private SimpleNode<T> first;
 	private SimpleNode<T> actual;
+	private SimpleNode<T> finalNode;
 	private int size;
 	
 	public LinkedSimpleList() {
@@ -129,6 +130,17 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 		
 		return null;
 	}
+	public void addAList(LinkedSimpleList<T> list){
+			
+		if(list.size()==0) {return;}else {
+		this.getCurrentNode().modifyNext(list.getFirst());
+		finalNode = list.getCurrentNode();
+		}
+		
+		
+		
+	}
+	
 
 	@Override
 	public T[] listing(T[] list) {
@@ -145,6 +157,17 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 			return list;
 			
 	}
+	public SimpleNode<T> getCurrentNode() {
+		// TODO Auto-generated method stub
+		if(actual!=null){
+		return actual;}
+		else{
+			return null;
+		}
+	}
+	public SimpleNode<T> getFirst(){
+		return first;
+	}
 
 	@Override
 	public T getCurrent() {
@@ -155,6 +178,7 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 			return null;
 		}
 	}
+
 
 	@Override
 	public T next() {
@@ -167,6 +191,7 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 		else
 			return null;
 	}
+	
 
 	@Override
 	public boolean hasNext() {
@@ -183,5 +208,6 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 			return rta;
 		}
 	}
+	
 
 }

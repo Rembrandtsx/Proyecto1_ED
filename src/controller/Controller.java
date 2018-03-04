@@ -14,7 +14,7 @@ public class Controller {
 	
 	public static void loadServices( ) {
 		// To define the dataset file's name 
-		String serviceFile = "./data/taxi-trips-wrvz-psew-subset-small.json";
+		String serviceFile = "./data/taxi-trips-wrvz-psew-subset-medium.json";
 		
 		manager.loadServices( serviceFile );
 	}

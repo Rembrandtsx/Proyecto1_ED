@@ -1,6 +1,9 @@
 package model.vo;
 
 import java.util.Date;
+
+import model.logic.utils.ComparatorServicio;
+
 import java.util.Calendar;
 
 /**
@@ -88,6 +91,7 @@ public class Service implements Comparable<Service> {
 	@Override
 	public int compareTo(Service o) {
 		// TODO Auto-generated method stub
-		return 0;
+		
+		return this.getDateStart().compareTo(o.getDateStart());
 	}
 }
