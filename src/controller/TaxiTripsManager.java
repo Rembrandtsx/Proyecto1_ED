@@ -29,7 +29,7 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 	
 	private LinkedSimpleList<Service> services;
 	private LinkedSimpleList<Taxi> taxis;
-	private Ordenamiento<Service> hola;
+	private Ordenamiento<Service> hola = new Ordenamiento<Service>();
 	
 	
 	
@@ -121,10 +121,15 @@ public class TaxiTripsManager implements ITaxiTripsManager {
 			e4.printStackTrace();
 		}
 		System.out.println("Se Cargaron :"+services.size());
+		for(int i = 0; i < services.size(); i+=100) {
+			
+			
+			System.out.println("SERVICIO " +i  +"   "+ services.get(i).getDateStart().toString());
+		}
 			System.out.println("Hola ::"+ suma );
 			
+			
 	}
-	
 
 	@Override
 	public LinkedSimpleList<Taxi> getTaxisOfCompany(String company) {

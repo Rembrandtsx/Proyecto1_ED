@@ -6,13 +6,14 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 
 	private SimpleNode<T> first;
 	private SimpleNode<T> actual;
-	private SimpleNode<T> finalNode;
+	private SimpleNode<T> lastNode;
 	private int size;
 	
 	public LinkedSimpleList() {
 		// TODO Auto-generated constructor stub
 		first=null;
 		actual=null;
+		lastNode=null;
 		size=0;
 	}
 	
@@ -24,22 +25,16 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 		if(element==null){
 			throw new NullPointerException();
 		}
-		boolean respuesta=false;
-		if(first!=null){
-			actual=first;
-			while(actual!=null&&respuesta==false){
-				
-				if(actual.getNext()==null){
-					actual.modifyNext(new SimpleNode<T>(element));
-					respuesta=true;
-					size++;
-				}
-				this.next();
-				
-			}
+		
+		if(first==null){
+			first= new SimpleNode<T>(element);
+			lastNode= first;
+			size++;
+			
 		}
 		else{
-			first= new SimpleNode<T>(element);
+			lastNode.modifyNext(new SimpleNode<T>(element));
+			lastNode= lastNode.getNext();
 			size++;
 			
 		}
@@ -134,7 +129,7 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 			
 		if(list.size()==0) {return;}else {
 		this.getCurrentNode().modifyNext(list.getFirst());
-		finalNode = list.getCurrentNode();
+		lastNode = list.getCurrentNode();
 		}
 		
 		

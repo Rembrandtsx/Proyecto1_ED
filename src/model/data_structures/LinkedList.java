@@ -33,6 +33,8 @@ public interface LinkedList <T extends Comparable<T>>  {
 	public T next();
 	
 	public boolean hasNext();
+
+	
 	
 	
 

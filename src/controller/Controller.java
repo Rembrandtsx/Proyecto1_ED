@@ -20,7 +20,7 @@ public class Controller {
 	}
 		
 	public static LinkedList<Taxi> getTaxisOfCompany (String company) {
-		return manager.getTaxisOfCompany(company);
+		return (LinkedList<Taxi>) manager.getTaxisOfCompany(company);
 	}
 	
 	public static LinkedSimpleList<Service> getTaxiServicesToCommunityArea(int communityArea) {

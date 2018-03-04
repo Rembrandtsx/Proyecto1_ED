@@ -14,11 +14,11 @@ public class Ordenamiento <T extends Comparable<T>>{
 	    
 	   
 	 
-    public void mergeSortLinkedList(LinkedSimpleList<T> services, Comparator<T> comparador) {
-        head = sortLinkedList(services.getFirst(), comparador);
+    public void mergeSortLinkedList(LinkedSimpleList<T> services) {
+        head = sortLinkedList(services.getFirst());
     }
 
-    private SimpleNode<T> sortLinkedList(SimpleNode<T> head,  Comparator<T> comparador) {
+    private SimpleNode<T> sortLinkedList(SimpleNode<T> head) {
 
         if (head == null || head.getNext() == null)
             return head;
@@ -43,14 +43,14 @@ public class Ordenamiento <T extends Comparable<T>>{
             currentSimpleNode = next;
         }
 
-        SimpleNode<T> leftHalf = sortLinkedList(left, comparador);
-        SimpleNode<T> rightHalf = sortLinkedList(right, comparador);
-        SimpleNode<T> mergedLinkedList = merge(leftHalf, rightHalf, comparador);
+        SimpleNode<T> leftHalf = sortLinkedList(left);
+        SimpleNode<T> rightHalf = sortLinkedList(right);
+        SimpleNode<T> mergedLinkedList = merge(leftHalf, rightHalf);
 
         return mergedLinkedList;
     }
 
-    private SimpleNode<T> merge(SimpleNode<T> left, SimpleNode<T> right,  Comparator<T> comparador) {
+    private SimpleNode<T> merge(SimpleNode<T> left, SimpleNode<T> right) {
         SimpleNode<T> leftSimpleNode = left;
         SimpleNode<T> rightSimpleNode = right;
 

@@ -1,6 +1,7 @@
 package model.data_structures;
 
-public class SimpleNode <T extends Comparable<T>>{
+
+public class SimpleNode <T>{
 
 	private T element;
 	
@@ -29,5 +30,6 @@ public class SimpleNode <T extends Comparable<T>>{
 	public SimpleNode<T> getNext(){
 		return this.next;
 	}
+
 	
 }
