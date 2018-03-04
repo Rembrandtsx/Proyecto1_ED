@@ -203,6 +203,103 @@ public class LinkedSimpleList<T extends Comparable<T>> implements LinkedList<T>{
 			return rta;
 		}
 	}
+	public void setFirst(SimpleNode<T> pfirst)
+	{
+		first= pfirst;
+	}
+	public void setSize(int pSize)
+	{
+		size=pSize;
+	}
+	
+	public void setLast(SimpleNode<T> pLast)
+	{
+		lastNode= pLast;
+	}
+	
+	public SimpleNode<T> removeFirst()
+	{
+		SimpleNode<T> oldFirst=first;
+		first=first.getNext();
+		oldFirst.modifyNext(null);
+		return oldFirst;
+	}
+	public SimpleNode<T> getNode(int pos){
+		int count=0;
+		if(first!=null){
+			
+			actual=first;
+			while(actual!=null){
+				if(count==pos){
+					return actual;
+				}
+				else{
+					count++;
+					next();
+				}
+			}
+		}
+		
+		return null;
+		
+	}
+	
+	public LinkedSimpleList<T> mergesort(LinkedSimpleList<T> lista)
+	{
+		int low=0;
+		int high= lista.size()-1;
+		LinkedSimpleList<T> left;
+		LinkedSimpleList<T> right = new LinkedSimpleList<T>();
+		LinkedSimpleList<T> result= new LinkedSimpleList<T>();
+		int middle= lista.size()/2;
+		SimpleNode<T> NodeMiddle = (SimpleNode<T>) lista.getNode(middle);
+		SimpleNode<T> NodeMiddleP1 = (SimpleNode<T>) lista.getNode(middle+1);
+		if(lista.size()<=1)
+		{
+			return lista;
+		}
+		else 
+		{
+			right=new LinkedSimpleList<T>();
+			right.setFirst(NodeMiddleP1);
+			right.setLast(lista.getLast());
+			NodeMiddle.modifyNext(null);
+			left=lista;
+			left.setLast(NodeMiddle);
+			right.setSize(lista.size()-middle);
+			left.setSize(middle);
+			left= mergesort(left);
+			right= mergesort(right);
+			SimpleNode<T> n = merge(left,right);
+			result.setFirst(n);
+			return result;
+		}
+			
+			
+		
+	}
+
+	private SimpleNode<T> getLast() {
+		// TODO Auto-generated method stub
+		return lastNode;
+	}
+
+	public SimpleNode<T> merge(LinkedSimpleList<T> left, LinkedSimpleList<T> right)
+	{
+		LinkedSimpleList<T> result = new LinkedSimpleList<T>();
+		while(left.size()>0 && right.size()>0)
+		{
+			if (left.getFirst().getElement().compareTo(right.getFirst().getElement())==-1||left.getFirst().getElement().compareTo(right.getFirst().getElement())==0)
+			{
+				result.add(left.removeFirst().getElement());
+			}
+			else
+				result.add(right.removeFirst().getElement());
+		}
+		return result.getFirst();
+	}
+	
+
 	
 
 }
